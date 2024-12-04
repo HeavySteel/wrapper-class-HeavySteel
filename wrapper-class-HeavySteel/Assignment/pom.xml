@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Define the project -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Define the model version FOR NOW ALWSYS 4.0.0-->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Define the group ID, artifact ID, version, name, description, and URL of the project. -->
+    <groupId>io.github.fixthis</groupId>
+    <artifactId>Assignment</artifactId>
+    <version>1.0.0</version>
+    <name>Assignment</name>
+    <description>This assignment creates a database utilizing HashMaps and a Java Record class</description>
+
+    <properties>
+        <!-- Define the JDK version and character encoding -->
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
+    <!--
+    Licenses are important for open-source projects.
+    They define how the project can be used, distributed, modified, and how to give credit to the original author.
+    -->
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!-- Information about the developers of the project. -->
+    <!-- keep your github repo private-->
+    <developers>
+        <developer>
+            <id>putyourgithubidhere</id>
+            <name>First_name Last_name</name>
+            <email>githubemailhere</email>
+        </developer>
+    </developers>
+
+    <!-- Information about the source code management system (e.g. GitHub). -->
+    <!-- keep your github repo private-->
+    <scm>
+        <url>http://www.github.com/actualrepo</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <!-- Define the plugins used in the build process. -->
+        <plugins>
+            <!-- Define the plugin to sign the files using GPG -->
+
+
+
+
+            <!-- Define the plugin to attach the Javadocs to the JAR file. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
